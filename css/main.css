@@ -1,0 +1,83 @@
+/* reset */
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, ul {
+  margin: 0;
+  font-weight: normal;
+}
+
+/* style */
+.page {
+  color: #111;
+  font-size: 16px;
+
+  background: url('/img/st-michael-hospital.jpg') center center no-repeat;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  /* Safari */
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+
+  margin: 2em 4em;
+}
+
+.container {
+  background-color: #eee;
+  opacity: 0.9;
+  padding: 1em;
+  width: 470px;
+}
+
+.section {
+  font-family: 'Lato', sans-serif;
+}
+
+.section h1, .section h3 {
+  font-family: 'Cinzel', serif;
+}
+
+.section h1 {
+  font-size: 3em;
+}
+
+.section h2 {
+  font-size: 1.8em;
+}
+
+.section h3 {
+  font-size: 1.5em;
+}
+
+.item h4 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.item .summary, .section a {
+  line-height: 1.4em;
+}
+
+.item i {
+  color: #111;
+}
+
+.section a {
+  color: #644;
+}
+
+.bare .item {
+  list-style-type: none;
+}
+
+.divider {
+  text-align: center;
+  margin: 0.5em 0;
+}
+
+.divider:before {
+  content: '______';
+}
