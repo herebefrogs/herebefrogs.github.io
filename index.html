@@ -4,89 +4,185 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>J&eacute;r&ocirc;me Lecomte</title>
-    <link href='http://fonts.googleapis.com/css?family=Lato|Cinzel' rel='stylesheet' type='text/css'>
-    <link href="/css/main.css" rel="stylesheet" type="text/css">
     <link href="/css/font-awesome-4.1.0.min.css" rel="stylesheet" type="text/css">
+    <style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+header {
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14);
+}
+
+h1, h2, h3 {
+  margin: 0;
+  padding: 0.5em;
+}
+
+footer > div, article > div, article > nav {
+  margin: 0;
+  padding: 0 0.5em;
+}
+
+footer > div:last-child {
+  padding-bottom: 1em;
+}
+
+.card {
+  border-radius: 2px;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),
+              0 1px 1px 0 rgba(0,0,0,.14),
+              0 2px 1px -1px rgba(0,0,0,.12);
+  padding-bottom: 1em;
+}
+
+footer a {
+  color: #004D40; /* Material Design Green 900 */
+}
+
+a {
+  color: #1976D2; /* Material Design Blue 700 */
+}
+
+h1, h2 {
+  color: #fafafa;
+}
+
+.grid-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 1.5em;
+  padding-right: 1.5em;
+}
+
+.grid-item {
+  display: flex;
+  padding-top: 1.5em;
+  padding-left: 1.5em;
+  width: 100%;
+}
+
+@media all and (min-width: 40em) {
+  .grid-item {
+    width: 50%;
+  }
+}
+
+@media all and (min-width: 60em) {
+  .grid-item {
+    width: 33.33%;
+  }
+}
+
+.grid-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.grid-content p {
+  flex-grow: 1
+  flex-shrink: 0;
+  flex-basis: auto;
+}
+
+.red {
+  background-color: #E53935; /* Material Design Red 600 */
+}
+.green {
+  background-color: #43A047; /* Material Design Green 600 */
+}
+.blue {
+  background-color: #1E88E5; /* Material Design Blue 600 */
+}
+    </style>
   </head>
-  <body class="page">
-    <section class="container">
-      <header class="section">
-        <h1>J&eacute;r&ocirc;me Lecomte</h1>
-        <h2>Web Developer Extraordinaire</h2>
-      </header>
+  <body>
 
-      <section class="divider"></section>
+    <header>
+      <h1 class="green" >J&eacute;r&ocirc;me Lecomte</h1>
+    </header>
 
-      <section class="section">
-        <h3>Stuff I made</h3>
-        <ul>
-          <li class="item">
-            <h4>Forex Hockey</h4>
-            <div class="summary">A 2-player multitouch game mixing Air Hockey, Hungry Hungry Hippo and Foreign Exchange rates.</div>
+    <div class="grid-container">
+      <div class="grid-item">
+        <div class="grid-content card">
+          <h2 class="red">Stuff I made</h2>
+          <article>
+            <h3>Forex Hockey</h3>
+            <div>A 2-player multitouch game mixing Air Hockey, Hungry Hungry Hippo and Foreign Exchange rates.</div>
             <nav>
-              <a href="/forex-hockey">Play Now</a> -
+              <a href="/forex-hockey">Play Now</a> |
               <a href="https://github.com/herebefrogs/forex-hockey/#game-rules">Instructions</a>
             </nav>
-          </li>
-        </ul>
-      </section>
-      
-      <section class="divider"></section>
-
-      <section class="section">
-        <h3>Stuff I Said</h3>
-        <ul>
-          <li class="item">
-            <h4>Bug-Free Games from Day One with Behavior-Driven Development</h4>
-            <div class="summary">A 15 minute talk at Microsoft's Toronto Web Apps and HTML5 Games Code-Along in Toronto about applying behavior-driven development to video games making.</div>
+          </article>
+          <article>
+            <h3>Pixel art</h3>
+            <div>Personal creations for Pixel Dailies challenge on Twitter</div>
+            <nav>
+              <a href="https://twitter.com/search?f=tweets&vertical=default&q=%40herebefrogs%20%23pixel_dailies&src=typd">@herebefrogs #pixel_dailies</a>
+            </nav>
+          </article>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="grid-content card">
+          <h2 class="green">Stuff I wrote</h2>
+          <article>
+            <h3>Master screen orientation with HTML5</h4>
+            <div>A web tutorial and screencast published in web design magazine Net Mag, from the perspective of a HTML5 video game developer.</div>
+            <nav>
+              <div><a href="http://www.creativebloq.com/web-design/master-screen-orientation-html5-101517371">Net Mag Summer 2015 Issue</a><div>
+            </nav>
+          </article>
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="grid-content card">
+          <h2 class="blue">Stuff I said</h2>
+          <article>
+            <h3>Bug-Free Games from Day One with Behavior-Driven Development</h3>
+            <div>A 15 minute talk at Microsoft's Toronto Web Apps and HTML5 Games Code-Along in Toronto about applying behavior-driven development to video games making.</div>
             <nav>
               <a href="http://www.youtube.com/watch?v=6_PmFSSqbDU">Watch Now</a>
             </nav>
-          </li>
-        </ul>
-      </section>
+          </article>
+        </div>
+      </div>
+    </div>
 
-      <section class="divider"></section>
-
-      <section class="section">
-        <h3>Contact me</h3>
-        <ul class="bare">
-          <li class="item">
-            <a href="https://www.linkedin.com/in/jerle76">
-              <i class="fa fa-linkedin fa-fw"></i>
-              <span>linkedin.com/in/jerle76</span>
-            </a>
-          </li>
-          <li class="item">
-            <a href="mailto:jerle76+me@gmail.com">
-              <i class="fa fa-envelope fa-fw"></i>
-              <span>jerle76@gmail.com</span>
-            </a>
-          </li>
-          <li class="item">
-            <a href="https://github.com/herebefrogs">
-              <i class="fa fa-github fa-fw"></i>
-              <span>github.com/herebefrogs</span>
-            </a>
-          </li>
-          <li class="item">
-            <a href="https://twitter.com/herebefrogs">
-              <i class="fa fa-twitter fa-fw"></i>
-              <span>@herebefrogs</span>
-            </a>
-          </li>
-        </ul>
-      </section>
-
-      <section class="divider"></section>
-
-      <footer class="section">
-        <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/StillImage" property="dct:title" rel="dct:type">Picture</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://www.flickr.com/photos/dexxus/5794905716" property="cc:attributionName" rel="cc:attributionURL">Paul Bica</a> licensed under <a rel="license" href="http://creativecommons.org/licenses/by/2.0/">Attribution 2.0 Generic</a>.
-      </footer>
-    </section>
-
-  <!--
-    -->
+    <footer class="green">
+      <h2>Contact me</h3>
+      <div>
+        <a href="https://www.linkedin.com/in/jerle76">
+          <i class="fa fa-linkedin fa-fw"></i>
+          <span>linkedin.com/in/jerle76</span>
+        </a>
+      </div>
+      <div>
+        <a href="mailto:jerle76+me@gmail.com">
+          <i class="fa fa-envelope fa-fw"></i>
+          <span>jerle76@gmail.com</span>
+        </a>
+      </div>
+      <div>
+        <a href="https://github.com/herebefrogs">
+          <i class="fa fa-github fa-fw"></i>
+          <span>github.com/herebefrogs</span>
+        </a>
+      </div>
+      <div>
+        <a href="https://twitter.com/herebefrogs">
+          <i class="fa fa-twitter fa-fw"></i>
+          <span>@herebefrogs</span>
+        </a>
+      </div>
+    </footer>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
