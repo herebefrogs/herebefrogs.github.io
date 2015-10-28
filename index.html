@@ -13,6 +13,17 @@
 body {
   margin: 0;
   font-family: Roboto, "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh
+}
+
+.list-item {
+  flex: 1;
 }
 
 header {
@@ -79,7 +90,7 @@ h1, h2 {
   }
 }
 
-@media all and (min-width: 60em) {
+@media all and (min-width: 80em) {
   .grid-item {
     width: 33.33%;
   }
@@ -89,12 +100,6 @@ h1, h2 {
   display: flex;
   flex-direction: column;
   width: 100%;
-}
-
-.grid-content p {
-  flex-grow: 1
-  flex-shrink: 0;
-  flex-basis: auto;
 }
 
 .card.red h2 {
@@ -125,13 +130,13 @@ footer.green a {
 
     </style>
   </head>
-  <body>
+  <body class="list-container">
 
     <header class="green">
       <h1>J&eacute;r&ocirc;me Lecomte</h1>
     </header>
 
-    <div class="grid-container">
+    <div class="grid-container list-item">
       <div class="grid-item">
         <div class="grid-content card red">
           <h2>Stuff I made</h2>
