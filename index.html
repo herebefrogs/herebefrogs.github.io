@@ -19,12 +19,26 @@ header {
   box-shadow: 0 2px 2px 0 rgba(0,0,0,.14);
 }
 
-h1, h2, h3 {
+h1, h2 {
   margin: 0;
   padding: 0.5em;
 }
 
-footer > div, article > div, article > nav {
+article h3 {
+  margin: 0;
+  padding: 0.5em 0;
+}
+
+article {
+  margin: 0;
+  padding: 0.5em;
+}
+
+article div, article nav {
+  padding-bottom: 0.5em;
+}
+
+footer > div {
   margin: 0;
   padding: 0 0.5em;
 }
@@ -38,15 +52,6 @@ footer > div:last-child {
   box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),
               0 1px 1px 0 rgba(0,0,0,.14),
               0 2px 1px -1px rgba(0,0,0,.12);
-  padding-bottom: 1em;
-}
-
-footer a {
-  color: #004D40; /* Material Design Green 900 */
-}
-
-a {
-  color: #1976D2; /* Material Design Blue 700 */
 }
 
 h1, h2 {
@@ -92,27 +97,44 @@ h1, h2 {
   flex-basis: auto;
 }
 
-.red {
-  background-color: #E53935; /* Material Design Red 600 */
+.card.red h2 {
+  background-color: #e53935; /* material design red 600 */
 }
-.green {
+header.green h1, .card.green h2, footer.green {
   background-color: #43A047; /* Material Design Green 600 */
 }
-.blue {
+.card.blue h2 {
   background-color: #1E88E5; /* Material Design Blue 600 */
 }
+
+.card.red a {
+  color: #e53935; /* material design red 600 */
+}
+
+.card.green a {
+  color: #43A047; /* Material Design Green 600 */
+}
+
+.card.blue a {
+  color: #1E88E5; /* Material Design Blue 600 */
+}
+
+footer.green a {
+  color: #212121; /* Material Design Grey 900 */
+}
+
     </style>
   </head>
   <body>
 
-    <header>
-      <h1 class="green" >J&eacute;r&ocirc;me Lecomte</h1>
+    <header class="green">
+      <h1>J&eacute;r&ocirc;me Lecomte</h1>
     </header>
 
     <div class="grid-container">
       <div class="grid-item">
-        <div class="grid-content card">
-          <h2 class="red">Stuff I made</h2>
+        <div class="grid-content card red">
+          <h2>Stuff I made</h2>
           <article>
             <h3>Forex Hockey</h3>
             <div>A 2-player multitouch game mixing Air Hockey, Hungry Hungry Hippo and Foreign Exchange rates.</div>
@@ -123,7 +145,7 @@ h1, h2 {
           </article>
           <article>
             <h3>Pixel art</h3>
-            <div>Personal creations for Pixel Dailies challenge on Twitter</div>
+            <div>Personal pixel art creations for the Pixel Dailies challenge on Twitter</div>
             <nav>
               <a href="https://twitter.com/search?f=tweets&vertical=default&q=%40herebefrogs%20%23pixel_dailies&src=typd">@herebefrogs #pixel_dailies</a>
             </nav>
@@ -131,23 +153,30 @@ h1, h2 {
         </div>
       </div>
       <div class="grid-item">
-        <div class="grid-content card">
-          <h2 class="green">Stuff I wrote</h2>
+        <div class="grid-content card green">
+          <h2>Stuff I wrote</h2>
           <article>
-            <h3>Master screen orientation with HTML5</h4>
+            <h3>Master Screen Orientation with HTML5</h4>
             <div>A web tutorial and screencast published in web design magazine Net Mag, from the perspective of a HTML5 video game developer.</div>
             <nav>
-              <div><a href="http://www.creativebloq.com/web-design/master-screen-orientation-html5-101517371">Net Mag Summer 2015 Issue</a><div>
+              <div><a class="green" href="http://www.creativebloq.com/web-design/master-screen-orientation-html5-101517371">Net Mag Summer 2015 Issue</a><div>
             </nav>
           </article>
         </div>
       </div>
       <div class="grid-item">
-        <div class="grid-content card">
-          <h2 class="blue">Stuff I said</h2>
+        <div class="grid-content card blue">
+          <h2>Stuff I said</h2>
+          <article>
+            <h3>A Lazy Web Developer's Guide to Arduino</h3>
+            <div>A 20 minute talk at Toronto Perl Mongers meetup about Arduino programming with Javascript and the Johnny Five framework to create a web-based secret handshakes guessing game.</div>
+            <nav>
+              <a href="https://youtu.be/1pb6B9V5UOs?t=1h3m20s">Watch Now</a>
+            </nav>
+          </article>
           <article>
             <h3>Bug-Free Games from Day One with Behavior-Driven Development</h3>
-            <div>A 15 minute talk at Microsoft's Toronto Web Apps and HTML5 Games Code-Along in Toronto about applying behavior-driven development to video games making.</div>
+            <div>A 20 minute talk at Microsoft's Toronto Web Apps and HTML5 Games Code-Along in Toronto about applying behavior-driven development to video games making.</div>
             <nav>
               <a href="http://www.youtube.com/watch?v=6_PmFSSqbDU">Watch Now</a>
             </nav>
