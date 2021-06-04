@@ -1,0 +1,27 @@
+<!-- ETH pointer -->
+<meta name="monetization" content="$ilp.uphold.com/2kD7NjJBDjBb">
+
+<p><b>ETH</b>: <span id="amount">N/A</span> <span id="currency">N/A</span></p>
+<p>Coil <b><span id="state">N/A</span></b></p>
+
+<script>
+let total = 0;
+document.monetization.addEventListener('monetizationstart', ({detail}) => {
+  console.log('monetizationstart', document.monetization.state, detail);
+  state.innerHTML = 'ON';
+  state.style.color = 'green';
+});
+document.monetization.addEventListener('monetizationstop', ({detail}) => {
+  console.log('monetizationstop', document.monetization.state, detail);
+  state.innerHTML = 'OFF';
+  state.style.color = 'red';
+});
+document.monetization.addEventListener('monetizationprogress', ({detail}) => {
+  // no logs, too many events
+  total += detail.amount / Math.pow(10, detail.assetScale);
+
+  amount.innerHTML = total;
+  currency.innerHTML = detail.assetCode;
+});
+console.log(document.monetization.state);
+</script>
